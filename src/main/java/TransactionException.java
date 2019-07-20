@@ -1,10 +1,11 @@
 class TransactionException extends Exception {
-    private String errorCode;
-    private String errorMessage;
+    static final long serialVersionUID = 1L;
 
-    public TransactionException(String errorMessage, String errorCode) {
+    private String errorCode;
+
+    public TransactionException(String errorCode, String errorMessage) {
+        super(errorMessage);
         this.errorCode = errorCode;
-        this.errorMessage = errorMessage;
     }
 
     public String getErrorCode() {
